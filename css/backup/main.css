@@ -9,26 +9,6 @@ html, body {
 }
 
 
-
-img.displayed {
-    display: block;
-    margin-left: auto;
-    margin-right: auto }
-
-
-
-section.col-sd-1{
-    text-align: center;
-}
-
-section.col-sd-2{
-    text-align: center;
-}
-
-section.col-sd-3{
-    text-align: center;
-}
-
 h1 {
   display: inline-block;
   font: 40px, "Times New Roman";
@@ -41,6 +21,14 @@ a {
 
 li {
   list-style-type: none;
+}
+
+/* Navigation Styling */
+
+.nav-whole {
+  background-color: #1e668c;
+  height: 100%;
+  overflow: hidden;
 }
 
 nav ul {
@@ -82,32 +70,6 @@ input {
   padding: 5px;
   margin-bottom: 15px;
 }
-
-
-.search-bar {
-  margin-top: 20px;
-}
-
-/* Logo Image */
-.opp-logo {
-  margin-top: 12px;
-  width: 110%;
-}
-
-.leaf{
-   width: 100%;
-    margin-top: 10px;
-} 
-
-/* Navigation Styling */
-
-.nav-whole {
-  background-color: #1e668c;
-  height: 100%;
-  padding: 20px;
-  width: 100%;
-}
-
 
 /* Right Side of Navigation Bar */
 .navbar-right {
@@ -183,53 +145,6 @@ input {
 .fieldsets {
   margin-top: 15px;
 }
-
-#map_canvas {
-  border: 2px solid red;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: block;
-  background-color: #1e668c;
-  text-align: center;
-  width: 100%;
-  padding: 15px;
-  color: #f6f1ed;
-}
-
-.circle-wrapper h3 {
-  margin: 0;
-  width: 125px;
-  margin-bottom: 5px;
-}
-
-
-/* Adjusting font size for screen */
-@media (max-width: 1850px) {
-.c100.big {
-    font-size: 150px;
-}
-}
-
-@media (max-width: 1350px) {
-.c100.big {
-    font-size: 100px;
-}
-}
-
-
-/* Adjusting font size for screen */
-@media (max-width: 1400px) {
-.circle-wrapper > h3 {
-   font-size: 16px;
-}
-}
-
-
-
 
 
 /*.login-page {
