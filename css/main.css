@@ -21,10 +21,15 @@ h1 {
   display: inline-block;
   font: 40px, "Times New Roman";
   position: relative;
+  margin-bottom: 15px;
 }
 
 a {
   color: #00B7FF;
+}
+
+a:hover {
+  text-decoration: none;
 }
 
 li {
@@ -35,14 +40,8 @@ li {
 /* Navigation Styling */
 
 .nav-whole {
-  background-color: #1e668c;
+  background-color: #104E70;
 
-
-}
-
-
-/* Right Side of Navigation Bar */
-.navbar-right {
 
 }
 
@@ -118,6 +117,36 @@ input {
   margin-bottom: 15px;
   border-radius: 5px;
 }
+
+/* Background Gradients */
+.page-wrap {
+width: 100%;
+ margin-left: auto;
+ margin-right: auto;
+   background-image: url("../images/rough_diagonal.png");
+  padding: 40px; 
+}
+
+
+/* Left Side Inner */
+.inner section.col-md-8 {
+    background-image: url("../images/rough_diagonal.png"); 
+    padding: 40px;
+  
+}
+
+/* Entire Left Side */
+section.inner {
+    background-image: url("../images/rough_diagonal.png"); 
+    padding: 0;
+}
+
+
+.col-md-12 {
+  padding: 0;
+}
+
+
 
 
 .search-bar {
@@ -210,15 +239,35 @@ input {
   border-top: 2px dashed gray;
   padding-top: 30px;
   margin-top: 30px;
+  height: 100%;
+  overflow: none;
 }
 
-.post-form fieldset {
-  width: 100%;
-  display: inline-block;
-  text-align: right;
-  padding-right: 20px;
+
+
+.fieldsets button {
+    background-color: #2A5C35;
+  padding: 15px;
+  border-radius: 5px;
+  color: #f2f2f2;
+  text-align: center;
+  float: right;
 }
 
+
+.post-form {
+  text-align: center;
+  margin: auto;
+}
+
+/* Form Inputs */
+.post-form label {
+display: block;
+}
+
+
+
+/* Form Inputs */
 
 
 .post-form button {
@@ -226,7 +275,57 @@ input {
   padding: 15px;
   border-radius: 5px;
   color: #f2f2f2;
+  text-align: center;
+
 }
+
+
+.post-form fieldset {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+  padding-right: 20px;
+}
+
+
+/* Form Input Styling WRAPPER */
+.form-inputs {
+  width: 250px;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+/* Form Inputs */
+.post-form .input-details {
+  background-color: rgba(240,240,240,1);
+  margin-left: 15px;
+
+}
+
+/* Form Input Styling WRAPPER */
+.form-inputs label{
+  margin-left: 25px;
+}
+
+
+.search-here-wrapper h2 {
+  display: inline-block;
+  margin-right: 20px;
+
+}
+
+
+/* Form Inputs */
+.post-form .search-here {
+  padding: 15px;
+  border-radius: 15px;
+  width: 400px;
+  display: inline-block;
+
+}
+
+
 
 
 
@@ -244,6 +343,11 @@ input {
 .postal-code button {
   float: right;
   margin-right: 15px;
+  background-color: #2A5C35;
+  padding: 15px;
+  border-radius: 5px;
+  color: #f2f2f2;
+  text-align: center;
 }
 
 .postal-code p {
@@ -263,14 +367,23 @@ fieldset {
   background-color: rgba(255, 255, 255, 0.2); 
   padding: 40px;
   border-radius: 20px;
+  height: 100%;
+  overflow: hidden;
 }
 
+.fieldsets .submit-changes {
+  width: 100%;
+}
+
+
 /* Hide Fieldsets */
-.fieldsets-hide, .fieldsets-hide > button {
+/*.fieldsets-hide, .fieldsets-hide > button {
     background-color: rgba(20,20,20,0.3);
     opacity: 0.4;
 
-}
+}*/
+
+
 
 .submit-code p {
     color: black;
@@ -280,12 +393,10 @@ fieldset {
 }
 
 
-
-
-
 #map_canvas {
   border: 1px dotted black;
   height: 500px;
+  margin-left: 15px;
 }
 
 /* Circles */
@@ -302,23 +413,77 @@ fieldset {
   margin-bottom: 25px;
 }
 
-div.help {
- background-color: rgba(255, 255, 255, 0.4); 
-padding: 30px;
-border-radius: 40px;
-}
 
-div.login {
- background-color: rgba(255, 255, 255, 0.4); 
-padding: 30px;
- border-radius: 40px;
 
-}
-
-.page-wrap {
+.login {
   width: 50%;
- margin-left: auto;
- margin-right: auto;
+  background-color: rgba(130, 130, 130, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.login button {
+    background-color: #2A5C35;
+    padding: 15px;
+    border-radius: 5px;
+    color: #f2f2f2;
+    text-align: center;
+}
+
+
+
+.help {
+  width: 50%;
+ background-color: rgba(130, 130, 130, 0.1);
+  padding: 30px;
+  border-radius: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.help li {
+  margin-bottom: 15px;
+  list-style-type: decimal;
+
+}
+
+.help li:before {
+  color: #61a60e;
+}
+
+.help a {
+  color: #2A5C35;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.help a:hover {
+  color: #61a60e;
+  text-decoration: none;
+  background-color: rgba(100,100,100,0.1);
+  padding: 10px;
+  border-radius: 5px;
+
+
+}
+
+
+.public {
+  text-align: center;
+}
+
+.public button {
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+
+.public a {
+  font-size: 0.8em;
 }
 
 
@@ -327,24 +492,6 @@ padding: 30px;
   background-color:lightgray;
 
 }
-
-/* Background Styling Inner */
-.inner  {
-
-}
-
-/* Left Side Inner */
-.inner section.col-md-8 {
-    background-image: url("../images/rough_diagonal.png"); 
-    padding: 40px;
-    
-}
-
-/* Entire Left Side */
-section.inner {
-    background-image: url("../images/rough_diagonal.png"); 
-}
-
 
 
 
@@ -381,6 +528,7 @@ label {
   float: left;
   font-size: 0.9em;
   margin-top: 15px;
+  margin-right: 15px;
 }
 
 select {
@@ -398,13 +546,15 @@ img.displayed {
 
 
 .footer {
-
-  padding: 0;
-  background-color: #1e668c;
+  padding: 10px;
+  background-color: #104E70;
   text-align: center;
   padding: 15px;
   color: #f6f1ed;
+}
 
+.footer p {
+  padding: 10px;
 }
 
 

@@ -1,106 +1,101 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>  
-<link rel="stylesheet" href="css/bootstrap-theme.css" />
-<link rel="stylesheet" href="css/bootstrap.min.css" />
-<link rel="stylesheet" href="css/bootstrap.css" />
-<link rel="stylesheet" href="css/main.css" />
-    
+  <title>Login</title>  
+  <link rel="stylesheet" href="css/bootstrap-theme.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  
 </head>
-    <body>
-
-
-
-
+<body>
 
   <div class="row outer">
-     <div class="col-md-1"></div>
-       <div class="col-md-10 inner"> 
+   <div class="col-md-1"></div>
+   <div class="col-md-10 inner"> 
 
-         <section class="row nav-whole">
-               <section class="col-md-1">
-                 <img src="images/opp_logo.png" class="opp-logo"> 
-               </section> <!-- Close Column-->
-             
-                 <section class="col-md-10">
-                   <nav>
-                     <ul class="navbar-right">
-                       <li><a href="index.html" title="home">Home</a></li>
-                       <li><a href="help.html" title="help">Help/FAQ</a></li>
-                       <li><a href="login.html" title="login">Login</a></li>
-                     </ul>
-                   </nav>
-                 </section>
-                 <section class="col-md-1">
-                   <img src="images/georgian-accelerator-green-white-200.png" class="leaf">
-                 </section>
-               </section> <!-- Close Row -->
+     <section class="row nav-whole">
+       <section class="col-md-1">
+         <img src="images/opp_logo.png" class="opp-logo"> 
+       </section> <!-- Close Column-->
+       
+       <section class="col-md-10">
+         <nav>
+           <ul class="navbar-right">
+             <li><a href="index.html" title="dashboard">Dashboard</a></li>
+             <li><a href="help.html" title="help">Help/FAQ</a></li>
+             <li><a href="login.html" title="login">Login</a></li>
+           </ul>
+         </nav>
+       </section>
+       <section class="col-md-1">
+         <img src="images/georgian-accelerator-green-white-200.png" class="leaf">
+       </section>
+     </section> <!-- Close Row -->
 
 
-        
-      <div class="page-wrap">
-      <div class="row">
-          <section  class="col-md-12">
-        
-              <h1>Login</h1>
-          </section>      
-        </div>
-        
-        <div class="row">
-          <section  class="col-sd-2">
-          <p>Login using your Username and Password</p>
+     
+
+     <div class="row">
+      <section  class="col-md-12">
+        <div class="page-wrap">
+          <div class="login">
+
+            <h1>Login</h1>
+            <p>Login using your Username and Password</p>
             <div class="login">
-          
-          <form method="post" action="validate.php">
-          <div>
-          <label for="email">Username</label>
-          <input name="email" placeholder="Username" />
+              
+              <form method="post" action="validate.php">
+                <div>
+                  <label for="email">Username</label>
+                  <input name="email" placeholder="Username" />
+                </div>
+                <div>
+                  <label for="pass">Password:</label>
+                  <input name="pass" type="password" placeholder="Password" />
+                </div>
+                <button type="">Login</button>
+              </form>
+            </div>
           </div>
-          <div>
-          <label for="pass">Password:</label>
-          <input name="pass" type="password" placeholder="Password" />
-          </div>
-          <input type="submit" value="Login" />
-          </form>
-        </div>
-          
-          <h2>Forgot password? <a hef="click-here">click here.</a></h2>
-        
-          </section>
         </div> <!-- Close Row -->
-        </div>
+      </section>
+      <br />
+      <a href="">Forgot Password?</a>
+    </div>
 
 
 
-           <div class="row footer">
-             <div class="col-md-12">
-               <footer>
-                  <p>
-                    &copy; Copyright 2016. Inovify All rights reserved. | <a href="/info/">Info</a> | <a href="/privacy-policy/">Privacy Policy</a>
-                  </p>
-                </footer>
-             </div> <!-- Close Column-->
-           </div> <!-- Close Row -->
-
-           </div><!-- Close Col-->
-
-          <div class="col-md-1 outer"></div>
-
-        </div><!-- Close Row-->
 
 
-      
-        <div class="row">
-         <div class="col-md-1"></div>
-          <div class="col-md-10 footer">
- 
-          </div> <!-- Close Column-->
-        <div class="col-md-1"></div>
-        </div><!-- Close Row-->
-        
-        <script src="js/bootstrap.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/npm.js"></script>
-    </body>
+    <div class="row footer">
+     <div class="col-md-12">
+       <footer>
+        <p>
+          &copy; Copyright 2016. Inovify All rights reserved. | <a href="/info/">Info</a> | <a href="/privacy-policy/">Privacy Policy</a>
+        </p>
+      </footer>
+    </div> <!-- Close Column-->
+  </div> <!-- Close Row -->
+
+</div><!-- Close Col-->
+
+<div class="col-md-1 outer"></div>
+
+</div><!-- Close Row-->
+
+
+
+<div class="row">
+ <div class="col-md-1"></div>
+ <div class="col-md-10 footer">
+   
+ </div> <!-- Close Column-->
+ <div class="col-md-1"></div>
+</div><!-- Close Row-->
+
+<script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/npm.js"></script>
+</body>
 </html>
