@@ -16,9 +16,8 @@
 <body>
 
 
-
   <div class="row outer">
-     <div class="col-md-1 outer"></div>
+     <div class="col-md-1"></div>
        <div class="col-md-10 inner"> 
 
          <section class="row nav-whole">
@@ -147,7 +146,9 @@
                          <input type="text" placeholder="Address"/>
                          <input type="text" placeholder="City"/>
                          <input type="text" placeholder="Province"/>
-                         <button>Submit Search</button>
+                         <fieldset class="submit-search">
+                           <button>Submit Search</button>
+                         </fieldset>
                          </form>
                        </div>
                        </section> <!-- Close Column-->
@@ -159,7 +160,7 @@
      
                    <section class="row">
                      <div id="map_canvas" class="md-col-12">
-                       <p>lorem50</p>
+                       <p>Insert Map Here</p>
                      </div>
                    </section>
      
@@ -168,8 +169,7 @@
      
                    </section> <!-- Entire Left Grid Column Close-->
      
-     
-     
+    
      
                  </section> <!-- Close Inner Row-->
      
@@ -178,53 +178,74 @@
                <section class="col-md-4 recent-submissions">
                  <div class="trans">
                    <table>
-                     <thead class="info">
-                       <p id="username" class="info">User Name</p>
-                       <p id="username" class="info">Police Auxillery</p>
-                       <p id="username" class="info">#45356</p>
-                     </thead>
-     
-                       <tfoot>
+                                  
+                             <div class="thead-wrapper">
+                     
+                                 <p id="username" class="info">OPP Admin</p>
+                               
+                                 <div class="opp-crest-wrapper">
+                                   <img src="images/OPP_Crest.png" class="opp-crest" alt="">
+                                 </div>
+                               
+                                 <p id="username" class="info">Police Auxillery</p>
+                                 <p id="username" class="info">#45356</p>
+                              </div>
+                                                
+                          
+                        <tfoot>
+                           <tr>
+                             <td>Notes</td>
+                             <td>Request Change</td>
+                           </tr>
+                         </tfoot>
                          <tr>
-                           <td>Notes</td>
-                           <td>Request Change</td>
+                           <th>Date</th>
+                           <th>Area</th>
                          </tr>
-                       </tfoot>
-                       <tr>
-                         <th>Date</th>
-                         <th>Area</th>
-                       </tr>
-                       <tr>
-                         <td>03/06/2016</td>
-                         <td>L3V 5F8</td>
-                       </tr>
-                       <tr>
-                         <td>03/06/2016</td>
-                         <td>L3V 5F8</td>
-                       </tr>
-                       <tr>
-                         <td>03/06/2016</td>
-                         <td>L3V 5F8</td>
-                       </tr>
-                       <tr>
-                         <td>03/06/2016</td>
-                         <td>L3V 5F8</td>
-                       </tr>
-                   </table>
+                         <tr>
+                           <td>03/06/2016</td>
+                           <td>L3V 5F8</td>
+                         </tr>
+                         <tr>
+                           <td>03/06/2016</td>
+                           <td>L3V 5F8</td>
+                         </tr>
+                         <tr>
+                           <td>03/06/2016</td>
+                           <td>L3V 5F8</td>
+                         </tr>
+                         <tr>
+                           <td>03/06/2016</td>
+                           <td>L3V 5F8</td>
+                         </tr>
+                  
+                     </table>
      
-                 </div>
 
               <section class="row map-changes">
                  <section class="col-md-12">
      
-                   <p>To make changes to this map, Please Enter the Postal Code. The factor being affected and the rating</p>
+                   <p><em>Please Enter the Postal Code. The factor being affected and the rating</em></p>
      
                    <div class="postal-code">
                      <label for="">Postal Code:</label>
                      <input type="text">
+
+                     <button type="">Submit Code</button>
+
+                     <p>Postal Code needs verification</p>
+                     <br />
                    </div>
+
+                     <br />
+                     <br />
      
-                   <div class="fieldsets">
+
+                    <div class="submit-code">
+                      <p>Verify Postal Code</p>
+                    </div>
+
+                   <div class="fieldsets fieldsets-hide">
                      <fieldset>
                        <label for="">Density and Land Use</label>
                        <select name="density">
@@ -294,25 +315,34 @@
                </section><!-- Close Entire Right Section-->
 
      
-             </section> <!-- Close Column-->
-     
            </section> <!-- Close Row -->
 
+
+           <div class="row footer">
+             <div class="col-md-12">
+               <footer>
+                  <p>
+                    &copy; Copyright 2016. Inovify All rights reserved. | <a href="/info/">Info</a> | <a href="/privacy-policy/">Privacy Policy</a>
+                  </p>
+                </footer>
+             </div> <!-- Close Column-->
+           </div> <!-- Close Row -->
+
            </div><!-- Close Col-->
+
           <div class="col-md-1 outer"></div>
+
         </div><!-- Close Row-->
 
-      <footer>
+
+      
         <div class="row">
          <div class="col-md-1"></div>
-          <div class="col-md-10">
-            <p>
-              &copy; Copyright 2016. Inovify All rights reserved. | <a href="/info/">Info</a> | <a href="/privacy-policy/">Privacy Policy</a>
-            </p>
+          <div class="col-md-10 footer">
+ 
           </div> <!-- Close Column-->
         <div class="col-md-1"></div>
         </div><!-- Close Row-->
-      </footer>
 
         <script src="js/bootstrap.js"></script>
         <script src="js/bootstrap.min.js"></script>

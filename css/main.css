@@ -4,36 +4,17 @@ html, body {
   font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
   /* background-color: rgb(0,255,127);*/
   height: 100%;
-}
+  background-color:lightgray;
 
-/* Background Styling Edges */
-.outer{
-  background-color: red;
-}
-
-/* Background Styling Inner */
-.inner {
-  background-color: orange;
 }
 
 
-img.displayed {
-    display: block;
-    margin-left: auto;
-    margin-right: auto }
-
-
-
-section.col-sd-1{
-    text-align: center;
+.row {
+  padding: 0;
 }
 
-section.col-sd-2{
-    text-align: center;
-}
-
-section.col-sd-3{
-    text-align: center;
+section {
+  padding: 0;
 }
 
 h1 {
@@ -50,28 +31,78 @@ li {
   list-style-type: none;
 }
 
-nav ul {
-  margin: 0;
-  padding: 15px;
-  overflow: hidden;
+
+/* Navigation Styling */
+
+.nav-whole {
+  background-color: #1e668c;
+
+
 }
 
-nav ul li {
-  display: inline-block;
-  list-style-type: none;
-  padding-right: 15px;
+
+/* Right Side of Navigation Bar */
+.navbar-right {
+
+}
+
+
+.inner ol {
+  margin-bottom: 30px;
+  border-bottom: 2px dashed lightgray;
+  padding-bottom: 10px;
+}
+
+.inner li {
+  margin-bottom: 5px;
 }
 
 ol li {
   line-height: 1.5em;
 }
 
+nav {
+  font-size: 0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  padding-top: 38px;
+  padding-bottom: 38px;
+  overflow: hidden;
+  background-color: rgba(20,20,20,0.2);
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding-left: 1px;
+
+}
 
 nav li a {
-  font-size: 1.1em;
+  font-size: 24px;
   text-decoration: none;
   color: #f8f8f8;
+  padding: 0;
+  padding: 50px 25px 50px 25px;
+  border-right: 2px solid black;
+
 }
+
+nav li:first-of-type a {
+  border-left: 2px solid black;
+
+}
+
+
+nav li a:hover {
+  background-color: rgba(20,20,20,0.4);
+  text-decoration: none;
+  color: lightgray;
+}
+
 
 td {
   border-bottom: 1px solid black;
@@ -81,13 +112,12 @@ td, th, tr {
   padding: 8px 20px 8px 20px;
 }
 
-fieldset {
-  margin-bottom: 15px;
-}
+
 
 input {
-  padding: 5px;
+  padding: 10px;
   margin-bottom: 15px;
+  border-radius: 5px;
 }
 
 
@@ -98,30 +128,15 @@ input {
 /* Logo Image */
 .opp-logo {
   margin-top: 12px;
-  width: 110%;
-}
-
-.leaf{
-   width: 100%;
-    margin-top: 10px;
-} 
-
-/* Navigation Styling */
-
-.nav-whole {
-  background-color: #1e668c;
-  height: 100%;
-  padding: 20px;
   width: 100%;
 }
 
+.leaf{
+   width: 90%;
+    margin-top: 10px;
+    float: right;
+} 
 
-/* Right Side of Navigation Bar */
-.navbar-right {
-  padding-top: 4%;
-  padding-bottom: 4%;
-  margin-right: 15px;
-}
 
 .logo {
   text-align: center;
@@ -169,6 +184,7 @@ input {
 .recent-submissions {
   text-align: center;
   margin-top: 15px;
+ 
 
 }
 
@@ -178,52 +194,113 @@ input {
   margin-right: auto;
 }
 
-.map-changes {
-  margin-top: 40px;
-}
-
-.postal-code {
-  border-bottom: 1px solid black;
+/* Center Table */
+.recent-submissions .thead-wrapper {
+  border-bottom: 2px dashed gray;
+  margin-bottom: 20px;
   padding-bottom: 10px;
 }
 
-.fieldsets {
-  margin-top: 15px;
+
+.recent-submissions button {
+  padding: 10px;
 }
 
+
+.map-changes {
+  border-top: 2px dashed gray;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.post-form fieldset {
+  width: 100%;
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+}
+
+
+
+.post-form button {
+  background-color: #2A5C35;
+  padding: 15px;
+  border-radius: 5px;
+  color: #f2f2f2;
+}
+
+
+
+.postal-code {
+  border-bottom: 2px dashed lightgray;
+  background-color: rgba(255, 255, 255, 0.2); 
+  padding: 20px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 5px;
+
+
+}
+
+.postal-code button {
+  float: right;
+  margin-right: 15px;
+}
+
+.postal-code p {
+  margin-top: 15px;
+  margin-right: 15px;
+  font-size: 0.6em;
+  float: right;
+  clear: right;
+}
+
+fieldset {
+  margin-bottom: 15px;
+}
+
+.fieldsets {
+  margin-top: -10px;
+  background-color: rgba(255, 255, 255, 0.2); 
+  padding: 40px;
+  border-radius: 20px;
+}
+
+/* Hide Fieldsets */
+.fieldsets-hide, .fieldsets-hide > button {
+    background-color: rgba(20,20,20,0.3);
+    opacity: 0.4;
+
+}
+
+.submit-code p {
+    color: black;
+    font-size: 1.3em;
+    display: absolute;
+    padding-bottom: 10px;
+}
+
+
+
+
+
 #map_canvas {
-  border: 2px solid red;
+  border: 1px dotted black;
+  height: 500px;
 }
 
 /* Circles */
-.circle-wrapper h3 {
+.circle-wrapper h3{
   margin: 0;
   width: 125px;
+  margin-left: 25px;
   margin-bottom: 5px;
+
 }
 
-section.col-md-8 {
-    background-color: rgba(255, 255, 255, 0.4); 
-    padding: 40px;
-    
-}
-
-div.trans {
-   background-color: rgba(255, 255, 255, 0.4); 
-    padding: 40px;
-    border-radius: 40px;
-}
-
-div.postal-code {
-    background-color: rgba(255, 255, 255, 0.4); 
-    padding: 20px;
-    border-radius: 40px;
-}
-
-div.fieldsets {
-    background-color: rgba(255, 255, 255, 0.4); 
-    padding: 40px;
-    border-radius: 40px;
+/* Circles */
+.circle-wrapper h3:last-of-type {
+  margin-bottom: 25px;
 }
 
 div.help {
@@ -239,16 +316,103 @@ padding: 30px;
 
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: block;
+.page-wrap {
+  width: 50%;
+ margin-left: auto;
+ margin-right: auto;
+}
+
+
+/* Background Styling Edges */
+.outer{
+  background-color:lightgray;
+
+}
+
+/* Background Styling Inner */
+.inner  {
+
+}
+
+/* Left Side Inner */
+.inner section.col-md-8 {
+    background-image: url("../images/rough_diagonal.png"); 
+    padding: 40px;
+    
+}
+
+
+.trans {
+    padding: 40px;
+    padding: 40px;
+    border-radius: 5px;
+    background-color: rgba(150, 150, 150, 0.2);
+}
+
+
+.trans table {
+  width: 100%;
+}
+
+/* Crest Wrapper */
+.opp-crest-wrapper {
+  width: 100px;
+  margin: auto;
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin-bottom: 15px;
+
+}
+
+/* Crest Image */
+.opp-crest {
+  width: 100%;
+}
+
+/* Entire Left Side */
+section.inner {
+    background-color: #eee; 
+
+}
+
+
+
+label {
+  float: left;
+  font-size: 0.9em;
+  margin-top: 15px;
+}
+
+select {
+  padding: 10px;
+  float: right;
+}
+
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto 
+  }
+
+
+
+
+.footer {
+
+  padding: 0;
   background-color: #1e668c;
   text-align: center;
-  width: 100%;
   padding: 15px;
   color: #f6f1ed;
+
+}
+
+
+/* Adjusting font size for screen */
+@media (max-width: 3000px) {
+.c100.big {
+    font-size: 175px;
+}
 }
 
 
