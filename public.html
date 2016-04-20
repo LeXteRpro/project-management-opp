@@ -20,11 +20,6 @@
     <section class="row nav-whole">
 
       <section class="col-md-10">
-        <nav>
-          <ul class="navbar-right">
-            <li><a href="login.html" title="login">Login</a></li>
-          </ul>
-        </nav>
       </section>
       <section class="col-md-1">
         <img src="images/georgian-accelerator-green-white-200.png" class="leaf">
@@ -43,10 +38,30 @@
                 </section>
     
     </section>
+        
+     <section  class="col-sd-2">
+    <p>Login using your Username and Password</p>
+  <div class="login">
+<!-- Form that provides the login fields-->
+<form method="post" action="validate.php">
+<div>
+    <label for="email">Username</label>
+    <input name="email" placeholder="Username" />
+</div>
+<div>
+    <label for="pass">Password:</label>
+    <input name="pass" type="password" placeholder="Password" />
+</div>
+    <input type="submit" value="Login" />
+</form>
+        </div>
+
+    <h2>Forgot password? <a hef="click-here">click here.</a></h2>
+        
+          </section>
     
     <section class="col-sd-3">
     <h2>If you are not authorized, click here to go back.</h2>
-        <button><a href="login.html" title="login">Login/Logout</a></button>
         <a href="https://www.google.ca/" title="webpage">Click Here To Exit</a>
     
     </section>
