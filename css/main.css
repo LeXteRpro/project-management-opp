@@ -103,7 +103,6 @@ nav li a:hover {
   color: lightgray;
 }
 
-
 td {
   border-bottom: 1px solid black;
 }
@@ -341,6 +340,13 @@ padding: 30px;
     
 }
 
+/* Entire Left Side */
+section.inner {
+    background-image: url("../images/rough_diagonal.png"); 
+}
+
+
+
 
 .trans {
     padding: 40px;
@@ -367,12 +373,6 @@ padding: 30px;
 /* Crest Image */
 .opp-crest {
   width: 100%;
-}
-
-/* Entire Left Side */
-section.inner {
-    background-color: #eee; 
-
 }
 
 
