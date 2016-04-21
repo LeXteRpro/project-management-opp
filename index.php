@@ -27,9 +27,9 @@
        <section class="col-md-10">
          <nav>
            <ul class="navbar-right">
-             <li><a href="index.html" title="dashboard">Dashboard</a></li>
-             <li><a href="help.html" title="help">Help</a></li>
-             <li><a href="public.html" title="login">Logout</a></li>
+             <li><a href="index.php" title="dashboard">Dashboard</a></li>
+             <li><a href="help.php" title="help">Help</a></li>
+             <li><a href="public.php" title="login">Logout</a></li>
            </ul>
          </nav>
        </section>
@@ -39,8 +39,8 @@
      </section> <!-- Close Row -->
 
      <section class="row inner">
-       <section class="col-md-8">
-
+       <section class="col-md-8 dash">
+  <h1>Dashboard</h1>
          <h3>General Help / Instructions</h3>
 
          <ol>
@@ -359,6 +359,21 @@
 <script src="js/bootstrap.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/npm.js"></script>
+<script src="js/jquery-1.12.3.min.js"></script>
 
 </body>
 </html>
+
+<?php 
+
+session_start();
+
+echo "Welcome" . $_SESSION['username'];
+
+if (isset($_POST['logout'])) {
+  session_start();
+  session_destroy();
+
+  header('location: login.php');
+}
+?>

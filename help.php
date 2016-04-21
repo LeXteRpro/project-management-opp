@@ -22,9 +22,9 @@
        <section class="col-md-10">
          <nav>
            <ul class="navbar-right">
-             <li><a href="index.html" title="dashboard">Dashboard</a></li>
-             <li><a href="help.html" title="help">Help/FAQ</a></li>
-             <li><a href="login.html" title="login">Login</a></li>
+             <li><a href="index.php" title="dashboard">Dashboard</a></li>
+             <li><a href="help.php" title="help">Help/FAQ</a></li>
+             <li><a href="login.php" title="login">Logout</a></li>
            </ul>
          </nav>
        </section>

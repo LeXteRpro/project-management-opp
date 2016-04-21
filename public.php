@@ -27,7 +27,7 @@
 
          <nav>
            <ul class="navbar-right">
-             <li><a href="login.html" title="login">Login</a></li>
+             <li><a href="login.php" title="login">Login</a></li>
            </ul>
          </nav>
 

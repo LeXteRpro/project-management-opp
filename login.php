@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/bootstrap.css" />
   <link rel="stylesheet" href="css/main.css" />
-  
+
 </head>
 <body>
 
@@ -16,15 +16,16 @@
 
      <section class="row nav-whole">
        <section class="col-md-1">
-         <img src="images/opp_logo.png" class="opp-logo"> 
+
+          <img src="images/opp_logo.png" class="opp-logo"> 
+
        </section> <!-- Close Column-->
-       
+
        <section class="col-md-10">
          <nav>
            <ul class="navbar-right">
-             <li><a href="index.html" title="dashboard">Dashboard</a></li>
-             <li><a href="help.html" title="help">Help/FAQ</a></li>
-             <li><a href="login.html" title="login">Login</a></li>
+             <li><a href="index.php" title="login">Dashboard</a></li>
+             <li><a href="login.php" title="login">Login</a></li>
            </ul>
          </nav>
        </section>
@@ -32,9 +33,6 @@
          <img src="images/georgian-accelerator-green-white-200.png" class="leaf">
        </section>
      </section> <!-- Close Row -->
-
-
-     
 
      <div class="row">
       <section  class="col-md-12">
@@ -44,17 +42,17 @@
             <h1>Login</h1>
             <p>Login using your Username and Password</p>
             <div class="login">
-              
-              <form method="post" action="validate.php">
+
+              <form method="post" name="login">
                 <div>
-                  <label for="email">Username</label>
-                  <input name="email" placeholder="Username" />
+                  <label for="username">Username</label>
+                  <input type="text" name="username" placeholder="Username" />
                 </div>
                 <div>
-                  <label for="pass">Password:</label>
-                  <input name="pass" type="password" placeholder="Password" />
+                  <label for="password">Password:</label>
+                  <input type="text" name="password" placeholder="Password" />
                 </div>
-                <button type="">Login</button>
+                <input type="submit" name="login" value="Log Me in!"></input>
               </form>
             </div>
           </div>
@@ -63,10 +61,6 @@
       <br />
       <a href="">Forgot Password?</a>
     </div>
-
-
-
-
 
     <div class="row footer">
      <div class="col-md-12">
@@ -89,7 +83,7 @@
 <div class="row">
  <div class="col-md-1"></div>
  <div class="col-md-10 footer">
-   
+
  </div> <!-- Close Column-->
  <div class="col-md-1"></div>
 </div><!-- Close Row-->
@@ -99,3 +93,27 @@
 <script src="js/npm.js"></script>
 </body>
 </html>
+
+<?php 
+
+session_start();
+
+$conn = new PDO('mysql:host=localhost;dbname=opp', 'root', '');
+
+if (isset($_POST['login'])) {
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  $query = $conn->prepare("SELECT COUNT('id') FROM 'users' WHERE '$username' AND 'password' = '$password'");
+  $query->execute();
+
+  $count = $query->fetchColumn();
+
+  if ($count == "1") {
+    $_SESSION['username'] = $username;
+
+    header('location: index.php');
+  }
+}
+
+?>
