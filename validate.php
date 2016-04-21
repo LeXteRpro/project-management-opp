@@ -1,8 +1,10 @@
-<?php ob_start(); //Buffer start
+<?php
+
+ob_start(); //Buffer start
 
 
 // Store the inputs in variables and then hash the password
-$username = $_POST['username'];
+$username = $_POST['user'];
 /// Passing through another variable (Middle Man)
 $pass = hash('sha512', $_POST['pass']);
 
@@ -21,26 +23,26 @@ $count = $result->rowCount();
 //evaluate how many rows we found to know if the login exists or not
 
 if ($count >= 1) {
-	echo 'Logged in Successfully.'; 
+  echo 'Logged in Successfully.'; 
 
-	// Access session on the server
-	session_start();
+  // Access session on the server
+  session_start();
 
-	foreach  ($result as $row) {
-		// Get the identity from the user table & store in the session object
-		$_SESSION['user_id'] = $row['user_id'];
-
-		
-		header('location:index.html');
-      
-	}
+  foreach  ($result as $row) {
+    // Get the identity from the user table & store in the session object
+    $_SESSION['user_id'] = $row['user_id'];
+    header('location:index.html');
+  }
 }
 // Otherwise, login is invalid
 else {
-	echo 'Invalid Login';
+  echo 'Invalid Login';
 }
 // Disconnect
 $conn = null;
 
 // Send all output to the browser
  ob_flush(); ?>
+
+
+?>

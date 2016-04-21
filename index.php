@@ -2,6 +2,12 @@
 <html>
 <head>
   <title>Home</title>  
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+   <link rel="stylesheet" type="text/css" href="css/vscustom.css">
+    <script type="text/javascript"
+      src="http://maps.googleapis.com/maps/api/js?key=&sensor=true">
+    </script>
+<script src="js/custom1.js"></script> 
   <link rel="stylesheet" href="css/bootstrap-theme.css" />
   <link rel="stylesheet" href="css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/bootstrap.css" />
@@ -170,7 +176,7 @@
 
        <section class="row">
          <div id="map_canvas" class="md-col-12">
-           <p>Insert Map Here</p>
+         <script>initialize();</script>
          </div>
        </section>
 
@@ -360,20 +366,20 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="js/npm.js"></script>
 <script src="js/jquery-1.12.3.min.js"></script>
-
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>    
 </body>
 </html>
 
-<?php 
+<?php
 
-session_start();
+// session_start();
 
-echo "Welcome" . $_SESSION['username'];
+// echo "Welcome" . $_SESSION['username'];
 
-if (isset($_POST['logout'])) {
-  session_start();
-  session_destroy();
+// if (isset($_POST['logout'])) {
+//   session_start();
+//   session_destroy();
 
-  header('location: login.php');
-}
+//   header('location: login.php');
+// }
 ?>
