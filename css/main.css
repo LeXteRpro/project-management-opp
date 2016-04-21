@@ -34,7 +34,7 @@ a:hover {
 
 li {
   list-style-type: none;
-  font-size: 1rem;
+
 }
 
 
@@ -612,7 +612,7 @@ tr,td {
 @media (max-width: 990px) {
 
 nav {
-    width: 900px;
+    width: 100%;
 }
 
 nav ul {
@@ -673,15 +673,6 @@ section.circle-wrapper {
   margin-right: 10px;
 
 }
-
-li {
-  font-size: 1em !important;
-}
-
-a {
-  font-size: 1em !important;
-}
-
 
 }
 
